@@ -1,5 +1,5 @@
 //
-//  MemoDetailsViewController.swift
+//  ScratchDetailsViewController.swift
 //  Memos
 //
 //  Created by Owen Henley on 9/10/18.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MemoDetailsViewController: UIViewController {
+class ScratchDetailsViewController: UIViewController {
+    
+    var scratch: Scratch?
 
     override func viewDidLoad() {
         super.viewDidLoad()
