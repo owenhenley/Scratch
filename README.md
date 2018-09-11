@@ -1,2 +1,2 @@
-# Datums
-A note taking app that incorporates CoreData, CloudKit and REST.
+# Scratch
+A note taking app that incorporates CoreData, CloudKit, REST, CoreLocation
