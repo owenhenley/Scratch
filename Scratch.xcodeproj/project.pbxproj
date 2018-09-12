@@ -82,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				3ED764B6214712D0002DE137 /* Scratch */,
+				3ED764C5214712D0002DE137 /* Resources */,
 				3ED764B5214712D0002DE137 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,7 +104,6 @@
 				3ED764C1214712D0002DE137 /* UI */,
 				3E016C8321477AB200DBB103 /* Services */,
 				3E016C8521477AEF00DBB103 /* Extensions */,
-				3ED764C5214712D0002DE137 /* Resources */,
 			);
 			path = Scratch;
 			sourceTree = "<group>";
@@ -161,6 +161,7 @@
 				3ED764C6214712D0002DE137 /* AppDelegate.swift */,
 			);
 			name = Resources;
+			path = Scratch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +394,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYZA2EE6W8;
 				INFOPLIST_FILE = "$(SRCROOT)/Scratch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,6 +413,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYZA2EE6W8;
 				INFOPLIST_FILE = "$(SRCROOT)/Scratch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
