@@ -32,6 +32,6 @@ struct WeatherDictionary: Decodable {
     let weatherDescription: String
     
     enum CodingKeys: String, CodingKey {
-    case weatherDescription = "weather"
+    case weatherDescription = "description"
     }
 }

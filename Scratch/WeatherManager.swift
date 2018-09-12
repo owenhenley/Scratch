@@ -62,8 +62,7 @@ class WeatherService {
                 let rootDictionary = try jsonDecoder.decode(RootDictionary.self, from: data)
                 guard let weather = rootDictionary.data.first?.weather.weatherDescription else {
                     completion(nil)
-                    return
-                }
+                    return }
                 completion(weather)
             } catch {
                 print("Error Decoding JSON: \(error.localizedDescription)")

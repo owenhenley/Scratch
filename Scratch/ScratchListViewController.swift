@@ -74,7 +74,7 @@ extension ScratchListViewController: UITableViewDelegate, UITableViewDataSource 
         if editingStyle == .delete {
             // What are we Deleteing?
             let cellToDelete = ScratchController.shared.scratch[indexPath.row]
-            // What shal we use to delete it?
+            // What shall we use to delete it?
             ScratchController.shared.delete(scratch: cellToDelete)
             // Delete the row from the table view
             tableView.deleteRows(at: [indexPath], with: .fade)
