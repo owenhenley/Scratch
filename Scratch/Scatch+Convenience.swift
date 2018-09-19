@@ -10,12 +10,12 @@ import Foundation
 import CoreData
 
 extension Scratch {
-    convenience init(title: String, body: String, date: Date = Date(), weather: String, context: NSManagedObjectContext = CoreDataStack.moc) {
+    convenience init(title: String, body: String, weather: String, context: NSManagedObjectContext = CoreDataStack.moc) {
         
         self.init(context: context)
         self.title = title
         self.body = body
-        self.date = date
+        self.date = Date()
         self.weather = weather
     }
 }

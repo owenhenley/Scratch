@@ -26,13 +26,16 @@ class ScratchDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.titleTextField.resignFirstResponder()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
         WeatherService.getWeather { (weather) in
             self.weather = weather
         }
-        
         updateViews()
-        self.titleTextField.resignFirstResponder()
-        
     }
     
     // MARK: - Actions
