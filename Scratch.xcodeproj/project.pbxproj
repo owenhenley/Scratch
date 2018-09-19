@@ -13,6 +13,8 @@
 		3E3E94922147342600CAFB95 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E94912147342600CAFB95 /* DateFormatter.swift */; };
 		3EBA5053214871780046D5C9 /* ScratchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA5052214871780046D5C9 /* ScratchController.swift */; };
 		3EBA5055214875FB0046D5C9 /* Scatch+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA5054214875FB0046D5C9 /* Scatch+Convenience.swift */; };
+		3EC3351D2151E72800999574 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC3351C2151E72800999574 /* CloudKitManager.swift */; };
+		3EC3351F2151E73A00999574 /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC3351E2151E73A00999574 /* CloudKitSyncable.swift */; };
 		3EC492A92147324A00338298 /* ScratchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC492A82147324A00338298 /* ScratchListViewController.swift */; };
 		3EC492AB2147327700338298 /* ScratchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC492AA2147327700338298 /* ScratchDetailsViewController.swift */; };
 		3ED764C4214712D0002DE137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED764C2214712D0002DE137 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		3E3E94912147342600CAFB95 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		3EBA5052214871780046D5C9 /* ScratchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchController.swift; sourceTree = "<group>"; };
 		3EBA5054214875FB0046D5C9 /* Scatch+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scatch+Convenience.swift"; sourceTree = "<group>"; };
+		3EC3351C2151E72800999574 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		3EC3351E2151E73A00999574 /* CloudKitSyncable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
 		3EC492A82147324A00338298 /* ScratchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchListViewController.swift; sourceTree = "<group>"; };
 		3EC492AA2147327700338298 /* ScratchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchDetailsViewController.swift; sourceTree = "<group>"; };
 		3ED764B4214712D0002DE137 /* Scratch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scratch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +82,15 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		3EC3351B2151E71100999574 /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				3EC3351C2151E72800999574 /* CloudKitManager.swift */,
+				3EC3351E2151E73A00999574 /* CloudKitSyncable.swift */,
+			);
+			name = CloudKit;
+			sourceTree = "<group>";
+		};
 		3ED764AB214712D0002DE137 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +111,7 @@
 		3ED764B6214712D0002DE137 /* Scratch */ = {
 			isa = PBXGroup;
 			children = (
+				3EC3351B2151E71100999574 /* CloudKit */,
 				3E016C8421477ACE00DBB103 /* CoreData */,
 				3ED764B7214712D0002DE137 /* Models */,
 				3ED764BA214712D0002DE137 /* Controllers */,
@@ -174,6 +188,7 @@
 				3ED764B0214712D0002DE137 /* Sources */,
 				3ED764B1214712D0002DE137 /* Frameworks */,
 				3ED764B2214712D0002DE137 /* Resources */,
+				3E2EDE7A2151EEA0008D4D9B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -230,6 +245,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E2EDE7A2151EEA0008D4D9B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3ED764B0214712D0002DE137 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -237,7 +272,9 @@
 			files = (
 				3ED764C7214712D0002DE137 /* AppDelegate.swift in Sources */,
 				3ED764D721473019002DE137 /* Weather.swift in Sources */,
+				3EC3351D2151E72800999574 /* CloudKitManager.swift in Sources */,
 				3EBA5053214871780046D5C9 /* ScratchController.swift in Sources */,
+				3EC3351F2151E73A00999574 /* CloudKitSyncable.swift in Sources */,
 				3EC492A92147324A00338298 /* ScratchListViewController.swift in Sources */,
 				3E3E9490214733FE00CAFB95 /* CoreDataStack.swift in Sources */,
 				3E3E94922147342600CAFB95 /* DateFormatter.swift in Sources */,
@@ -394,12 +431,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYZA2EE6W8;
 				INFOPLIST_FILE = "$(SRCROOT)/Scratch/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.owenhenley.Scratch;
+				PRODUCT_BUNDLE_IDENTIFIER = io.owenhenley.Scratch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -413,12 +450,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYZA2EE6W8;
 				INFOPLIST_FILE = "$(SRCROOT)/Scratch/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.owenhenley.Scratch;
+				PRODUCT_BUNDLE_IDENTIFIER = io.owenhenley.Scratch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

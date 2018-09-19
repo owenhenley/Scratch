@@ -31,11 +31,6 @@ class ScratchController {
     // MARK: - CRUD
     
     func newScratch(scratch: Scratch) {
-        // Start weather search
-        WeatherService.getWeather { (weather) in
-            scratch.weather = weather
-        }
-        
         saveToCoreData()
     }
     
