@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E2EDE7E2151F102008D4D9B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2EDE7D2151F102008D4D9B /* CloudKit.framework */; };
+		3E2EDE842151F8BD008D4D9B /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2EDE832151F8BD008D4D9B /* AuthenticationServices.framework */; };
 		3E3E948C2147313800CAFB95 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E948B2147313800CAFB95 /* WeatherManager.swift */; };
 		3E3E948E214733B200CAFB95 /* ScratchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E948D214733B200CAFB95 /* ScratchTableViewCell.swift */; };
 		3E3E9490214733FE00CAFB95 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E948F214733FE00CAFB95 /* CoreDataStack.swift */; };
@@ -26,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E2EDE7B2151F100008D4D9B /* Scratch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scratch.entitlements; sourceTree = "<group>"; };
+		3E2EDE7D2151F102008D4D9B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		3E2EDE832151F8BD008D4D9B /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		3E3E948B2147313800CAFB95 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		3E3E948D214733B200CAFB95 /* ScratchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchTableViewCell.swift; sourceTree = "<group>"; };
 		3E3E948F214733FE00CAFB95 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -51,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E2EDE842151F8BD008D4D9B /* AuthenticationServices.framework in Frameworks */,
+				3E2EDE7E2151F102008D4D9B /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,15 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		3E2EDE7C2151F102008D4D9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E2EDE832151F8BD008D4D9B /* AuthenticationServices.framework */,
+				3E2EDE7D2151F102008D4D9B /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3EC3351B2151E71100999574 /* CloudKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +113,7 @@
 				3ED764B6214712D0002DE137 /* Scratch */,
 				3ED764C5214712D0002DE137 /* Resources */,
 				3ED764B5214712D0002DE137 /* Products */,
+				3E2EDE7C2151F102008D4D9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +128,7 @@
 		3ED764B6214712D0002DE137 /* Scratch */ = {
 			isa = PBXGroup;
 			children = (
+				3E2EDE7B2151F100008D4D9B /* Scratch.entitlements */,
 				3EC3351B2151E71100999574 /* CloudKit */,
 				3E016C8421477ACE00DBB103 /* CoreData */,
 				3ED764B7214712D0002DE137 /* Models */,
@@ -188,7 +206,6 @@
 				3ED764B0214712D0002DE137 /* Sources */,
 				3ED764B1214712D0002DE137 /* Frameworks */,
 				3ED764B2214712D0002DE137 /* Resources */,
-				3E2EDE7A2151EEA0008D4D9B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -211,6 +228,17 @@
 				TargetAttributes = {
 					3ED764B3214712D0002DE137 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.AutoFillCredentialProvider = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -244,26 +272,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3E2EDE7A2151EEA0008D4D9B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3ED764B0214712D0002DE137 /* Sources */ = {
@@ -428,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Scratch/Scratch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYZA2EE6W8;
 				INFOPLIST_FILE = "$(SRCROOT)/Scratch/Info.plist";
@@ -447,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Scratch/Scratch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYZA2EE6W8;
 				INFOPLIST_FILE = "$(SRCROOT)/Scratch/Info.plist";
