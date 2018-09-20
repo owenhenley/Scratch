@@ -8,45 +8,36 @@
 
 import Foundation
 import CoreData
+import CloudKit
 
 class ScratchController {
     
     // Set Singleton
     static let shared = ScratchController()
     
-    var scratch: [Scratch] {
-        // Declare what type of request
-        let request: NSFetchRequest<Scratch> = Scratch.fetchRequest()
-
-        do {
-            // Waht do we actually want to do? Fetch!
-            return try CoreDataStack.moc.fetch(request)
-        } catch {
-            print("Error loading data ❌")
-            return []
-        }
+    var entries: [Scratch] = []
+    
+    // - Database
+    let privateDatabase = CKContainer.default().privateCloudDatabase
+    let sharedDatabase = CKContainer.default().sharedCloudDatabase
+    
+    func fetchFromCK() {
+        
     }
     
-    
-    // MARK: - CRUD
-    
-    func newScratch(scratch: Scratch) {
-        saveToCoreData()
+    func saveToCK() {
+        
     }
     
-    func delete(scratch: Scratch) {
-        scratch.managedObjectContext?.delete(scratch)
-        saveToCoreData()
+    func deleteFromCK() {
+        
     }
     
-    
-    // MARK: - CoreData
-    
-    func saveToCoreData() {
-        do {
-            try CoreDataStack.moc.save()
-        } catch {
-            print("Error Saving to CoreData ❌")
-        }
+    func update() {
+        
     }
 }
+
+
+
+
