@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreData
 import CloudKit
 
 class ScratchController {
@@ -47,16 +46,55 @@ class ScratchController {
         }
     }
     
-    func saveToCK() {
+    func newScratch(title: String, body: String, weather: String, completion: @escaping (Bool) -> Void) {
+        let newScratch = Scratch(title: title, body: body, weather: weather)
+        let ckRecord = CKRecord(scratch: newScratch)
         
+        privateDatabase.save(ckRecord) { (_, error) in
+            if let error = error {
+                print("Error saving to CloudKit: \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+            self.entries.append(newScratch)
+            completion(true)
+        }
     }
     
-    func deleteFromCK() {
+    func deleteFromCK(scratch: Scratch, completion: @escaping (Bool) -> Void) {
+        guard let recordID = scratch.ckRecordID else {
+            return
+        }
         
+        privateDatabase.delete(withRecordID: recordID) { (_, error) in
+            if let error = error {
+                print("Error deleting from CloudKit: \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+            
+            guard let indexToRemove = self.entries.index(of: scratch) else {
+                return
+            }
+            
+            self.entries.remove(at: indexToRemove)
+            completion(true)
+        }
     }
     
-    func update() {
+    func update(scratch: Scratch, title: String, body: String, weather: String, completion: @escaping (Bool) -> Void) {
+        scratch.title = title
+        scratch.body = body
+        scratch.weather = weather
+        scratch.date = Date()
         
+        let record = CKRecord(scratch: scratch)
+        let operation = CKModifyRecordsOperation(recordsToSave: [record], recordIDsToDelete: nil)
+        operation.savePolicy = .changedKeys
+        operation.queuePriority = .veryHigh
+        operation.qualityOfService = .userInteractive
+        operation.completionBlock = { completion(true) }
+        privateDatabase.add(operation)
     }
 }
 
