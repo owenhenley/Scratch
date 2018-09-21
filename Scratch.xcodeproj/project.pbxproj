@@ -11,19 +11,15 @@
 		3E2EDE842151F8BD008D4D9B /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2EDE832151F8BD008D4D9B /* AuthenticationServices.framework */; };
 		3E3E948C2147313800CAFB95 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E948B2147313800CAFB95 /* WeatherManager.swift */; };
 		3E3E948E214733B200CAFB95 /* ScratchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E948D214733B200CAFB95 /* ScratchTableViewCell.swift */; };
-		3E3E9490214733FE00CAFB95 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E948F214733FE00CAFB95 /* CoreDataStack.swift */; };
 		3E3E94922147342600CAFB95 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E94912147342600CAFB95 /* DateFormatter.swift */; };
+		3EA28D762152E04100716C10 /* Scratch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA28D752152E04100716C10 /* Scratch.swift */; };
 		3EBA5053214871780046D5C9 /* ScratchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA5052214871780046D5C9 /* ScratchController.swift */; };
-		3EBA5055214875FB0046D5C9 /* Scatch+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA5054214875FB0046D5C9 /* Scatch+Convenience.swift */; };
-		3EC3351D2151E72800999574 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC3351C2151E72800999574 /* CloudKitManager.swift */; };
-		3EC3351F2151E73A00999574 /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC3351E2151E73A00999574 /* CloudKitSyncable.swift */; };
 		3EC492A92147324A00338298 /* ScratchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC492A82147324A00338298 /* ScratchListViewController.swift */; };
 		3EC492AB2147327700338298 /* ScratchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC492AA2147327700338298 /* ScratchDetailsViewController.swift */; };
 		3ED764C4214712D0002DE137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED764C2214712D0002DE137 /* Main.storyboard */; };
 		3ED764C7214712D0002DE137 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED764C6214712D0002DE137 /* AppDelegate.swift */; };
 		3ED764C9214712D2002DE137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED764C8214712D2002DE137 /* Assets.xcassets */; };
 		3ED764CC214712D2002DE137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED764CA214712D2002DE137 /* LaunchScreen.storyboard */; };
-		3ED764D521472FA0002DE137 /* Scratch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3ED764D321472FA0002DE137 /* Scratch.xcdatamodeld */; };
 		3ED764D721473019002DE137 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED764D621473019002DE137 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,12 +29,9 @@
 		3E2EDE832151F8BD008D4D9B /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		3E3E948B2147313800CAFB95 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		3E3E948D214733B200CAFB95 /* ScratchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchTableViewCell.swift; sourceTree = "<group>"; };
-		3E3E948F214733FE00CAFB95 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		3E3E94912147342600CAFB95 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		3EA28D752152E04100716C10 /* Scratch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scratch.swift; sourceTree = "<group>"; };
 		3EBA5052214871780046D5C9 /* ScratchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchController.swift; sourceTree = "<group>"; };
-		3EBA5054214875FB0046D5C9 /* Scatch+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scatch+Convenience.swift"; sourceTree = "<group>"; };
-		3EC3351C2151E72800999574 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
-		3EC3351E2151E73A00999574 /* CloudKitSyncable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
 		3EC492A82147324A00338298 /* ScratchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchListViewController.swift; sourceTree = "<group>"; };
 		3EC492AA2147327700338298 /* ScratchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchDetailsViewController.swift; sourceTree = "<group>"; };
 		3ED764B4214712D0002DE137 /* Scratch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scratch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +40,6 @@
 		3ED764C8214712D2002DE137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ED764CB214712D2002DE137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ED764CD214712D2002DE137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3ED764D421472FA0002DE137 /* Memos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Memos.xcdatamodel; sourceTree = "<group>"; };
 		3ED764D621473019002DE137 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,15 +64,6 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		3E016C8421477ACE00DBB103 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				3ED764D321472FA0002DE137 /* Scratch.xcdatamodeld */,
-				3E3E948F214733FE00CAFB95 /* CoreDataStack.swift */,
-			);
-			name = CoreData;
-			sourceTree = "<group>";
-		};
 		3E016C8521477AEF00DBB103 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,15 +79,6 @@
 				3E2EDE7D2151F102008D4D9B /* CloudKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3EC3351B2151E71100999574 /* CloudKit */ = {
-			isa = PBXGroup;
-			children = (
-				3EC3351C2151E72800999574 /* CloudKitManager.swift */,
-				3EC3351E2151E73A00999574 /* CloudKitSyncable.swift */,
-			);
-			name = CloudKit;
 			sourceTree = "<group>";
 		};
 		3ED764AB214712D0002DE137 = {
@@ -129,8 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				3E2EDE7B2151F100008D4D9B /* Scratch.entitlements */,
-				3EC3351B2151E71100999574 /* CloudKit */,
-				3E016C8421477ACE00DBB103 /* CoreData */,
 				3ED764B7214712D0002DE137 /* Models */,
 				3ED764BA214712D0002DE137 /* Controllers */,
 				3ED764C1214712D0002DE137 /* UI */,
@@ -144,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				3ED764D621473019002DE137 /* Weather.swift */,
-				3EBA5054214875FB0046D5C9 /* Scatch+Convenience.swift */,
+				3EA28D752152E04100716C10 /* Scratch.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -278,19 +250,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA28D762152E04100716C10 /* Scratch.swift in Sources */,
 				3ED764C7214712D0002DE137 /* AppDelegate.swift in Sources */,
 				3ED764D721473019002DE137 /* Weather.swift in Sources */,
-				3EC3351D2151E72800999574 /* CloudKitManager.swift in Sources */,
 				3EBA5053214871780046D5C9 /* ScratchController.swift in Sources */,
-				3EC3351F2151E73A00999574 /* CloudKitSyncable.swift in Sources */,
 				3EC492A92147324A00338298 /* ScratchListViewController.swift in Sources */,
-				3E3E9490214733FE00CAFB95 /* CoreDataStack.swift in Sources */,
 				3E3E94922147342600CAFB95 /* DateFormatter.swift in Sources */,
-				3EBA5055214875FB0046D5C9 /* Scatch+Convenience.swift in Sources */,
 				3E3E948E214733B200CAFB95 /* ScratchTableViewCell.swift in Sources */,
 				3EC492AB2147327700338298 /* ScratchDetailsViewController.swift in Sources */,
 				3E3E948C2147313800CAFB95 /* WeatherManager.swift in Sources */,
-				3ED764D521472FA0002DE137 /* Scratch.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,19 +462,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		3ED764D321472FA0002DE137 /* Scratch.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3ED764D421472FA0002DE137 /* Memos.xcdatamodel */,
-			);
-			currentVersion = 3ED764D421472FA0002DE137 /* Memos.xcdatamodel */;
-			path = Scratch.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3ED764AC214712D0002DE137 /* Project object */;
 }

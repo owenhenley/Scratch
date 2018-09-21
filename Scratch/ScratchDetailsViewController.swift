@@ -52,11 +52,14 @@ class ScratchDetailsViewController: UIViewController {
             scratch.weather = weather
             scratch.date = Date()
         } else {
-            let newScratch = Scratch(title: title, body: body, weather: weather)
-            ScratchController.shared.newScratch(scratch: newScratch)
-            scratch = newScratch
+            ScratchController.shared.newScratch(title: title, body: body, weather: weather) { (success) in
+                if success {
+                    DispatchQueue.main.async {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+            }
         }
-        self.navigationController?.popViewController(animated: true)
     }
     
     func updateViews() {

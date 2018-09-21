@@ -25,7 +25,7 @@ class ScratchTableViewCell: UITableViewCell {
         
         guard let scratch = scratch else { return }
         
-        dateLabel.text = "\(scratch.date?.dateAsString() ?? "")"
+        dateLabel.text = "\(scratch.date.dateAsString())"
         titleLabel.text = scratch.title
         descriptionLabel.text = scratch.body
         currentWeatherLabel.text = scratch.weather
