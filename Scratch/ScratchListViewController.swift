@@ -18,6 +18,13 @@ class ScratchListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ScratchController.shared.fetchFromCK { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
